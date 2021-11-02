@@ -93,7 +93,7 @@ export default function AwsUpload() {
       {fileuploading.progress && <p>{`${fileuploading.progress}%`}</p>}
       {fileSize > 50 && <p>The file must be smaller than 50 MB</p>}
       {uploadConfirm && fileuploading.progress === 100 ? (
-        <p>Successfully upload file</p>
+        <p>Successfully uploaded file</p>
       ) : (
         <p></p>
       )}
