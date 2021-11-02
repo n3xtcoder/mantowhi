@@ -5,7 +5,11 @@ const AWS = require("aws-sdk");
 
 export default function AwsUpload() {
   const [photoUploaded, setPhotoUploaded] = useState([]);
+
   console.log(photoUploaded);
+
+  const fileSize = photoUploaded.size / 1024 / 1024;
+  console.log("Size", fileSize);
 
   // configure the keys for accessing AWS
   AWS.config.update({
@@ -46,7 +50,10 @@ export default function AwsUpload() {
           setPhotoUploaded(e.target.files[0]);
         }}
       />
-      <button onClick={uploadPic2}>Add file</button>
+      <button disabled={fileSize > 50 ? true : false} onClick={uploadPic2}>
+        Add file
+      </button>
+      {fileSize > 50 && <p>The file must be smaller than 50 MB</p>}
     </div>
   );
 }
