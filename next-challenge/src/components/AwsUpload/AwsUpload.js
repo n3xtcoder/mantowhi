@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import ProgressBar from "react-bootstrap/ProgressBar";
 import "./AwsUpload.css";
-//import S3FileUpload from "react-s3";
+
 require("dotenv").config();
 const AWS = require("aws-sdk");
 
@@ -17,8 +17,8 @@ export default function AwsUpload() {
   // configure the keys for accessing AWS
   AWS.config.update({
     apiVersion: "latest",
-    accessKeyId: "AKIA32AMNH4PBHGG566Q",
-    secretAccessKey: "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",
+    accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY,
   });
 
   // create S3 instance
@@ -50,7 +50,7 @@ export default function AwsUpload() {
       "httpUploadProgress",
       (progress) => {
         let uploaded = parseInt((progress.loaded * 100) / progress.total);
-        console.log(uploaded);
+
         setFileUploading({
           progress: uploaded,
           uploadText: "Uploading...",
