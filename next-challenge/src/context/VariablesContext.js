@@ -18,7 +18,6 @@ export const VariablesContextProvider = ({ children }) => {
         );
         let data = await response.json();
         setPhotoAlbum(data);
-        console.log(data);
       } catch (err) {
         console.log(err);
       }

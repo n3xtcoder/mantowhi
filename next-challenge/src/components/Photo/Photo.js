@@ -1,11 +1,15 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 
 import { VariablesContext } from "../../context/VariablesContext";
-import { BrowserRouter as Router, Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Photo.css";
 
 export default function Photo() {
+  const { photoAlbum } = useContext(VariablesContext);
+
   let { id } = useParams();
+
+  // Functions allow to switch between images
   let nextId = () => {
     return Number(id) + 1;
   };
@@ -13,16 +17,21 @@ export default function Photo() {
     return Number(id) - 1;
   };
 
-  const { photoAlbum, setPhotoAlbum } = useContext(VariablesContext);
-
   return (
     <div>
       <div className="d-flex justify-content-center m-1  ">
-        {photoAlbum.map((photo) => {
-          if (photo.id == id) {
-            return <img className="photoMobile" src={photo.url} />;
-          }
-        })}
+        {photoAlbum &&
+          photoAlbum.map((photo) => {
+            if (photo.id === Number(id)) {
+              return (
+                <img
+                  className="photoMobile"
+                  src={photo.url}
+                  alt={photo.title}
+                />
+              );
+            }
+          })}
       </div>
       <div className="buttonSwitch">
         <Link to={`${prevId()}`}>

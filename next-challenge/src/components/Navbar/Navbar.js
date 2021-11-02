@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import { Nav, Container } from "react-bootstrap";
-import { BrowserRouter as Router, Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 export default function NavbarApp() {
