@@ -1,0 +1,21 @@
+/* AWS upload */
+.buttonSize {
+  margin-bottom: 20px;
+}
+.divInput {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.chooseInput {
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+.progressBar {
+  width: 75%;
+  margin: 0 auto;
+}

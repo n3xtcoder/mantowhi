@@ -1,10 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
-import PhotoAlbum from "./components/PhotoAlbum";
-import NavbarApp from "./components/Navbar";
+import PhotoAlbum from "./components/PhotoAlbum/PhotoAlbum";
+import NavbarApp from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Photo from "./components/Photo";
-import AwsUpload from "./components/AwsUpload";
+import Photo from "./components/Photo/Photo";
+import AwsUpload from "./components/AwsUpload/AwsUpload";
 
 import { VariablesContextProvider } from "./context/VariablesContext";
 

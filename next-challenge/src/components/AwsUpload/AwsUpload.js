@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FileUploadProgress from "react-fileupload-progress";
 import ProgressBar from "react-bootstrap/ProgressBar";
-import "../App.css";
+import "./AwsUpload.css";
 //import S3FileUpload from "react-s3";
 require("dotenv").config();
 const AWS = require("aws-sdk");
@@ -64,9 +64,10 @@ export default function AwsUpload() {
   };
 
   return (
-    <div className="d-flex flex-column justify-content-center ">
-      <div className="d-flex justify-content-center w-75">
+    <div className="divInput">
+      <div>
         <input
+          className="chooseInput"
           type="file"
           onChange={(e) => {
             setPhotoUploaded(e.target.files[0]);
@@ -74,14 +75,18 @@ export default function AwsUpload() {
         />
       </div>
       <button
-        className="w-20"
+        className="buttonSize"
         disabled={fileSize > 50 ? true : false}
         onClick={uploadPic2}
       >
         Add file
       </button>
 
-      <ProgressBar animated now={fileuploading.progress} />
+      <ProgressBar
+        className="progressBar"
+        animated
+        now={fileuploading.progress}
+      />
       {fileuploading.progress && <p>{`${fileuploading.progress}%`}</p>}
       {fileSize > 50 && <p>The file must be smaller than 50 MB</p>}
       {uploadConfirm && <p>Successfully upload file</p>}

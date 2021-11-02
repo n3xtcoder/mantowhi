@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 
-import { VariablesContext } from "../context/VariablesContext";
+import { VariablesContext } from "../../context/VariablesContext";
 import { BrowserRouter as Router, Link, useParams } from "react-router-dom";
-import "../App.css";
+import "./Photo.css";
 
 export default function Photo() {
   let { id } = useParams();

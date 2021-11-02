@@ -1,0 +1,5 @@
+@media only screen and (max-width: 600px) {
+  .textNav {
+    font-size: 15px !important;
+  }
+}

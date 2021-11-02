@@ -1,13 +1,9 @@
-.App {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-/* .buttonLR {
+.buttonLR {
   background-color: black;
   color: whitesmoke;
 }
 
+/* Photo on Mobile */
 @media only screen and (min-width: 601px) {
   .buttonSwitch {
     position: absolute;
@@ -39,4 +35,3 @@
   width: 80%;
   margin: 0 auto;
 }
- */

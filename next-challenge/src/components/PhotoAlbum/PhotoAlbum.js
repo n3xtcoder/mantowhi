@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { VariablesContext } from "../context/VariablesContext";
+import { VariablesContext } from "../../context/VariablesContext";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
