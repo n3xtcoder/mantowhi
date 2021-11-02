@@ -1,0 +1,41 @@
+.App {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.buttonLR {
+  background-color: black;
+  color: whitesmoke;
+}
+/* Photo on Mobile */
+@media only screen and (min-width: 601px) {
+  .buttonSwitch {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+  }
+}
+.photoMobile {
+  box-shadow: 5px 6px 21px 0px #000000;
+}
+
+@media only screen and (max-width: 600px) {
+  .photoMobile {
+    width: 90%;
+    margin-top: 20px;
+  }
+  .textNav {
+    font-size: 15px !important;
+  }
+}
+.buttonSwitch {
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
