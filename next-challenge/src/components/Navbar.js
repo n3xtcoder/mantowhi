@@ -16,7 +16,7 @@ export default function NavbarApp() {
             <Link className="mr-3" to={`/`}>
               Photo Album
             </Link>
-            <Link href="#features">Aws Upload</Link>
+            <Link to={`/awsupload`}>Aws Upload</Link>
           </Nav>
         </Container>
       </Navbar>
